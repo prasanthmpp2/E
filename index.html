@@ -6,10 +6,21 @@
     <title>Prasanth M P - Professional Portfolio</title>
     <meta name="description" content="Portfolio of Prasanth M P - Web Developer, AI & ML Enthusiast, and Creative Professional">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1;stop-opacity:1'/%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23grad)'/%3E%3Cpath d='M 30 25 L 15 50 L 30 75' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M 70 25 L 85 50 L 70 75' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='55' y1='20' x2='45' y2='80' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
-    <!-- Fallback for older browsers -->
-    <link rel="alternate icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAK1JREFUSA3t1kEKgCAQQNH5n6ZFy1q0aaOLiAiJoKWLFi1atGjRokVERERERETk/wRBEARBEATB/wVBEARBEAQBEARBEARBEPxfEARBEARBEARBEPwfBEEQBEEQBEEQBMH/BUEQBEEQBEEQBMH/BUEQBEEQBEEQBMH/QRAEQRAEQRAEQfB/QRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRB8xwNYqQQh8bVXJwAAAABJRU5ErkJggg==">
+    <!-- ============================================ -->
+    <!-- FAVICON - Add your logo image here -->
+    <!-- ============================================ -->
+    <!-- Main favicon (PNG format - recommended) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+    <!-- Alternative: Use single logo image -->
+    <!-- <link rel="icon" type="image/png" href="images/logo.png"> -->
+    
+    <!-- For older browsers (ICO format) -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    <!-- Apple Touch Icon (for iOS devices when added to home screen) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     
     <style>
         * {
@@ -185,11 +196,11 @@
             align-items: center;
         }
 
-        /* Logo Container with SVG */
+        /* Logo with Image */
         nav .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -198,14 +209,16 @@
             transform: scale(1.05);
         }
 
-        nav .logo-svg {
+        /* Logo Image */
+        nav .logo-img {
             width: 40px;
             height: 40px;
+            border-radius: 8px;
             transition: all 0.3s ease;
         }
 
         @media (min-width: 768px) {
-            nav .logo-svg {
+            nav .logo-img {
                 width: 45px;
                 height: 45px;
             }
@@ -990,33 +1003,6 @@
             word-break: break-all;
         }
 
-        /* Copy Email Button */
-        .copy-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.4rem 0.6rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 0.5rem;
-            flex-shrink: 0;
-        }
-
-        .copy-btn:hover,
-        .copy-btn:active {
-            background: var(--primary-dark);
-            transform: scale(1.1);
-        }
-
-        .copy-btn svg {
-            width: 16px;
-            height: 16px;
-        }
-
         /* Toast Notification */
         .email-toast {
             position: fixed;
@@ -1040,7 +1026,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* Social Links with SVG Icons */
+        /* Social Links */
         .social-links {
             display: flex;
             justify-content: center;
@@ -1066,7 +1052,6 @@
             justify-content: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            -webkit-tap-highlight-color: transparent;
         }
 
         @media (min-width: 768px) {
@@ -1185,26 +1170,15 @@
     <!-- Theme Toggle -->
     <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Toggle theme">☀️</button>
 
-    <!-- Navigation with Logo -->
+    <!-- Navigation with Logo Image -->
     <nav id="navbar">
         <div class="container">
             <a href="#home" class="logo">
-                <!-- Custom SVG Logo -->
-                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <!-- Code brackets symbol -->
-                    <path d="M 30 25 L 15 50 L 30 75" stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 70 25 L 85 50 L 70 75" stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <!-- Center slash -->
-                    <line x1="55" y1="20" x2="45" y2="80" stroke="url(#logoGradient)" stroke-width="6" stroke-linecap="round"/>
-                    <!-- Circle background -->
-                    <circle cx="50" cy="50" r="48" stroke="url(#logoGradient)" stroke-width="3" fill="none" opacity="0.3"/>
-                </svg>
+                <!-- ============================================ -->
+                <!-- YOUR LOGO IMAGE HERE -->
+                <!-- ============================================ -->
+                <!-- Replace 'images/logo.png' with your actual logo file path -->
+                <img src="images/logo.png" alt="Prasanth M P Logo" class="logo-img">
                 <span class="logo-text">Prasanth M P</span>
             </a>
             <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
@@ -1218,7 +1192,6 @@
         </div>
     </nav>
 
-    <!-- Rest of your HTML remains the same -->
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -1428,10 +1401,7 @@
     </footer>
 
     <script>
-        // All your existing JavaScript remains the same
-        // (Particle System, Custom Cursor, Typing Effect, etc.)
-        
-        // Particle System (Optimized for mobile)
+        // Particle System
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -1515,7 +1485,7 @@
             }, 250);
         });
 
-        // Custom Cursor (Desktop only)
+        // Custom Cursor
         if (window.innerWidth >= 1024) {
             const cursorDot = document.getElementById('cursorDot');
             const cursorOutline = document.getElementById('cursorOutline');
@@ -1617,7 +1587,6 @@
             }, 10);
         }, { passive: true });
 
-       
         function showToast() {
             const toast = document.getElementById('emailToast');
             toast.classList.add('show');
@@ -1627,19 +1596,10 @@
             }, 3000);
         }
 
-        // Handle Email Click with Fallback
+        // Handle Email Click
         function handleEmailClick(event) {
             const mailtoLink = 'mailto:prasanthdhiyanesh2@gmail.com';
             window.location.href = mailtoLink;
-            
-            setTimeout(() => {
-                if (document.hasFocus()) {
-                    if (confirm('Email client not configured. Copy email address to clipboard instead?')) {
-                        copyEmail();
-                    }
-                }
-            }, 500);
-            
             return true;
         }
 
